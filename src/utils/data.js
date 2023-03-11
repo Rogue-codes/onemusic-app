@@ -1,5 +1,5 @@
-import { holiday, sabi, soso, wondamo } from "../assets";
-import { remaHoliday, sability, Soso, WonDaMo, ReasonYou } from "../audio";
+import { apollo, ElluP, folake, holiday, kolo,  rexxie, sabi, soso, wondamo } from "../assets";
+import { remaHoliday, sability, Soso, WonDaMo, ReasonYou, EllP, abgracadabra, kolomentall, folake2, apollo2 } from "../audio";
 
 export const data = [
     {
@@ -39,38 +39,38 @@ export const data = [
     },
 
     {
-        name: 'Sability',
-        img: sabi,
-        song: sability,
-        artist: 'Arya Star',
+        name: 'Folake',
+        img: folake,
+        song: folake2,
+        artist: 'Boy Spyce',
         background:"#e454cf"
     },
     {
-        name: 'Soso',
-        img: soso,
-        song: Soso,
+        name: 'Ellu P',
+        img: ElluP,
+        song: EllP,
         artist: 'Omah lay',
         background:"#c99bf5"
     },
     {
-        name: 'Holiday',
-        img: holiday,
-        song: remaHoliday,
-        artist: 'Rema',
+        name: 'Abracadabra',
+        img: rexxie,
+        song: abgracadabra,
+        artist: 'Rexxie ft Skibii,Naira marley_',
         background:"#d3a873"
     },
     {
-        name: 'Won Da Mo',
-        img: wondamo,
-        song: WonDaMo,
-        artist: 'Marvins',
+        name: 'Apollo',
+        img: apollo,
+        song: apollo2,
+        artist: 'Victony',
         background:"#844d4d"
     },
     {
-        name: 'Reason You',
-        img: holiday,
-        song: ReasonYou,
-        artist: 'Rema',
+        name: 'Kolomental',
+        img: kolo,
+        song: kolomentall,
+        artist: 'Victony',
         background:"#d3a873"
     },
 
