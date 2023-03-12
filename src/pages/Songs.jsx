@@ -23,7 +23,7 @@ export default function Songs() {
   console.log(isAlreadyInFavorites);
 
   return (
-    <div className="bg-black-main w-[80%] pt-16 h-[85%] p-5 px-24 overflow-y-scroll">
+    <div className="bg-black-main w-[85%] pt-16 h-[85%] p-5 px-24 overflow-y-scroll">
       <table className="w-full relative">
         <thead className=" backdrop-blur-sm sticky z-50 top-0 left-0 text-white-primary w-full">
           <tr>

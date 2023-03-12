@@ -21,7 +21,7 @@ export default function Genre() {
         },
     ]
   return (
-    <div className='bg-black-main overflow-y-scroll w-[80%] justify-between gap-6 items-center mb-5 h-[85%] py-16 flex flex-wrap px-12'>
+    <div className='bg-black-main overflow-y-scroll w-[85%] justify-between gap-6 items-center mb-5 h-[85%] py-16 flex flex-wrap px-12'>
         {
             data.map((item,index)=>(
                 <div key={index} className="relative w-[12.75rem] h-[12.75rem]">
