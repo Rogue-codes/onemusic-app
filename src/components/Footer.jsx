@@ -31,7 +31,7 @@ export default function Footer() {
 
   const currentlyPlaying = tracks[selectedTrack];
   return (
-    <div className="w-[80%] p-5 h-[15.5%] border-t border-blue-100 bg-[#000] fixed bottom-0 left-[20%] flex justify-between items-center">
+    <div className="w-[85%] p-5 h-[15.5%] border-t border-blue-100 bg-[#000] fixed bottom-0 left-[15%] flex justify-between items-center">
       <div className="flex items-center gap-5">
         <img src={currentlyPlaying?.img} width={50} alt="" />
         <div>

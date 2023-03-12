@@ -17,7 +17,7 @@ export default function Slider() {
     if (autoPlay) {
       intervalId = setInterval(() => {
         slide("right");
-      }, 5000);
+      }, 3000);
       return () => clearInterval(intervalId);
     }
   }, [activeSlide, image.length, autoPlay]);

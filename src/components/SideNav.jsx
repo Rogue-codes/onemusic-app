@@ -30,7 +30,7 @@ export default function SideNav() {
         }
     ]
   return (
-    <div className="w-[20%] px-5 h-full bg-black-side">
+    <div className="w-[15%] px-5 h-full bg-black-side">
         <h2 className='font-black text-3xl text-blue-100 mb-10'>One-Music</h2>
             <ul>
                 {
