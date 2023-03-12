@@ -4,7 +4,7 @@ import remaHoliday from "./RemaHoliday.mp3";
 import Soso from "./soso.mp3";
 import WonDaMo from "./WonDaMo.mp3";
 import RemaCalmDown from "./RemaCalmDown.mp3";
-import EllP from "./Ajimovoix-Drums-Obi-Dance-Beat-Ellu-P-(TrendyBeatz.com).mp3";
+import EllP from "./Libianca-People-(TrendyBeatz.com).mp3";
 import yoga from "./Asake-Yoga-New-Song-(TrendyBeatz.com).mp3";
 import abgracadabra from "./Rexxie-Ft-Skiibii-and-Naira-Marley-Abracadabra-(TrendyBeatz.com).mp3";
 import calmdown from "./Rema-Ft-Selena-Gomez-Baby-Calm-Down-Remix-(TrendyBeatz.com).mp3";
@@ -17,6 +17,7 @@ import folake2 from "./Boy-Spyce-Folake-New-Song-(TrendyBeatz.com).mp3";
 import rush from "./Ayra-Starr-Rush-(TrendyBeatz.com).mp3";
 import myguy from "./Tiwa-Savage-Ft-Spyro-Who-Is-Your-Guy-Remix-(TrendyBeatz.com).mp3";
 import joha from "./Asake-Joha-New-Song-(TrendyBeatz.com).mp3";
+import jol from "./Khaid-Jolie-(TrendyBeatz.com).mp3"
 
 export {
   ReasonYou,
@@ -38,4 +39,5 @@ export {
   rush,
   soweto,
   yoga,
+  jol
 };

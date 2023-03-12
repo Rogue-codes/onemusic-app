@@ -6,13 +6,11 @@ import {
 import { BsPlayFill, BsPauseFill } from "react-icons/bs";
 import { useAppContext } from "../context/PlayerProvider";
 import { reducerCases } from "../utils/contants";
-import { useNavigate } from "react-router-dom";
 export default function Controls() {
   const audioRef = useRef();
 
-  console.log(audioRef)
 
-  const navigate = useNavigate();
+
 
   const [{ selectedTrack, tracks, isPlaying }, dispatch] = useAppContext();
 
@@ -33,7 +31,7 @@ export default function Controls() {
       type: reducerCases.NEXT_TRACK,
       selectedTrack: selectedTrack === tracks.length - 1 ? 0 : selectedTrack + 1
     });
-    navigate(`/playing/${selectedTrack + 1}`);
+    // location.pathname === "/playing" && navigate(`/playing/${selectedTrack + 1}`);
     toggleAudio()
   }
 
@@ -42,13 +40,13 @@ export default function Controls() {
       type: reducerCases.NEXT_TRACK,
       selectedTrack:  selectedTrack === 0 ? tracks.length - 1 : selectedTrack - 1
     });
-    navigate(`/playing/${selectedTrack - 1}`);
+    // navigate(`/playing/${selectedTrack - 1}`);
     toggleAudio()
   }
 
 
   const selected = tracks[selectedTrack];
-  console.log(isPlaying)
+
   return (
     <div className="w-[10rem] relative text-white-primary h-full flex justify-between items-center">
       <audio
@@ -56,7 +54,7 @@ export default function Controls() {
         src={selected?.song}
         ref={audioRef}
         onEnded={() => {
-          navigate(`/playing/${selectedTrack + 1}`);
+          // navigate(`/playing/${selectedTrack + 1}`);
           handleNext()
         }}
         preload = "true"

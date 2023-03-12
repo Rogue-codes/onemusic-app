@@ -16,3 +16,13 @@ body{
 .parent2:hover .child2 {
   color: white;
 }
+
+.parentTd:hover .iconContainer {
+  visibility: visible;
+  transition: all .5s linear;
+}
+
+.iconContainer:hover .icon{
+  transform: scale(1.5);
+  transition: all .2s linear;
+}
