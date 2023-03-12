@@ -33,10 +33,10 @@ export default function Playing() {
 
   return (
     <div
-      className={`w-[80%] h-[85%] p-5 flex justify-center items-center relative`}
+      className={`w-[85%] h-[85%] p-5 flex justify-center items-center relative`}
     >
       <img src={currentlyPlaying.img} className="absolute left-0 top w-full h-full object-cover -z-20" alt="" />
-      <div className="absolute left-0 top w-full h-full -z-10 backdrop-blur-sm"></div>
+      <div className="absolute left-0 top w-full border-2  h-full -z-10 backdrop-blur-md"></div>
       <div className="w-full h-[80%] flex gap-5 items-center ">
         <div className="w-[200px] h-[200px] rounded">
           <img src={currentlyPlaying.img} alt="" className="rounded" />
