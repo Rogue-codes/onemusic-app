@@ -4,7 +4,7 @@ import { useAppContext } from '../context/PlayerProvider'
 function Favourites() {
     const [{favorite}] = useAppContext()
   return (
-    <div className='bg-black-main overflow-y-scroll w-[85%] mb-5 h-[85%] py-16 px-12'>
+    <div className='bg-black-main overflow-y-scroll w-full lg:w-[85%] mb-5 h-[85%] py-16 px-2 lg:px-12'>
       {
         favorite.length === 0 ?(<p className='flex pt-7  text-2xl font-bold justify-center items-center text-white-primary'>No favorites added</p>):
         favorite.map((item,index)=>(

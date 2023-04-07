@@ -64,7 +64,7 @@ export const data = [
         name: 'Abracadabra',
         img: rexxie,
         song: abgracadabra,
-        artist: 'Rexxie ft Skibii,Naira marley_',
+        artist: 'Rexxie',
         background:"#d3a873",
         duration:"03:02"
     },
@@ -86,7 +86,7 @@ export const data = [
     },
 
     {
-        name: 'Who Is Your Guy Spyro ft Tiwa Savage',
+        name: 'Who Is Your Guy',
         img: guy,
         song: myguy,
         artist: 'Spyro',

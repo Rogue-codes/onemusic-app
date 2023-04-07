@@ -16,7 +16,7 @@ export default function Explore() {
   return (
     <div className="flex justify-between items-center flex-wrap px-5">
       {tracks.map((item, index) => (
-        <div className="parent w-44 h-44 mt-9 relative cursor-pointer" key={index}>
+        <div className="parent w-32 lg:w-44 h-44 mt-2 lg:mt-9 relative cursor-pointer" key={index}>
           <img src={item.img} alt="" className="rounded-lg" />
           <p className="text-white-secondary text-sm">{item.name}</p>
           <div className="child absolute opacity-0 w-full h-full top-0 left-0 flex justify-center items-center bg-[#2021239f]">

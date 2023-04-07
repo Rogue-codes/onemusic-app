@@ -9,7 +9,7 @@ export default function Layout({ children }) {
       <Nav />
       <SideNav />
       {children}
-      <Footer />
+      <Footer/>
     </div>
   );
 }

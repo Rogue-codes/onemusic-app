@@ -33,19 +33,19 @@ export default function Playing() {
 
   return (
     <div
-      className={`w-[85%] h-[85%] p-5 flex justify-center items-center relative`}
+      className={`w-full lg:w-[85%] h-[85%] p-5 flex justify-center items-center relative`}
     >
       <img src={currentlyPlaying.img} className="absolute left-0 top w-full h-full object-cover -z-20" alt="" />
-      <div className="absolute left-0 top w-full border-2  h-full -z-10 backdrop-blur-md"></div>
-      <div className="w-full h-[80%] flex gap-5 items-center ">
-        <div className="w-[200px] h-[200px] rounded">
-          <img src={currentlyPlaying.img} alt="" className="rounded" />
+      <div className="absolute left-0 top w-full  h-full -z-10 backdrop-blur-md"></div>
+      <div className="w-full mt-8 lg:mt-0 h-[80%] flex flex-col lg:flex-row gap-5 items-start lg:items-center ">
+        <div className=" w-full h-44 lg:w-[200px] lg:h-[200px] rounded">
+          <img src={currentlyPlaying.img} alt="" className="rounded w-full object-cover h-full" />
         </div>
         <div>
-          <h2 className="text-4xl text-white-primary font-bold">
+          <h2 className="text-lg lg:text-4xl text-white-primary font-bold">
             {currentlyPlaying.name}
           </h2>
-          <p className="text-md mt-12 text-white-primary font-normal">
+          <p className="text-md mt-4 lg:mt-12 text-white-primary font-normal">
             Artist: {currentlyPlaying.artist}
           </p>
           <div className="w-full flex gap-5 items-center">
@@ -54,13 +54,13 @@ export default function Playing() {
               onClick={handlePlay}
             >
               {isPlaying ? <BsPauseFill size={30} /> : <BsPlayFill size={30} />}
-              <p className="text-lg font-medium">
+              <p className="text-md lg:text-lg font-medium">
                 {isPlaying ? "Pause" : "Play"}
               </p>
             </div>
 
             <div
-              className="parent2 flex items-center border border-blue-100 gap-4 cursor-pointer bg-[#ffffff17] text-white-secondary hover:bg-[#ffffff28] justify-between px-5 mt-7  h-[2.4rem] rounded"
+              className="parent2 flex justify-start items-center border border-blue-100 gap-4 cursor-pointer bg-[#ffffff17] text-white-secondary hover:bg-[#ffffff28]  px-5 mt-7  h-[2.4rem] rounded"
               onClick={() => {
                 isAlreadyInFavorites ?
                 removeFromFavorites():
@@ -81,9 +81,9 @@ export default function Playing() {
                 />
               )}
               {isAlreadyInFavorites ? (
-                <p className="child2 text-lg font-medium">remove from favorites</p>
+                <p className="child2 text-md lg:text-lg font-medium">remove</p>
               ) : (
-                <p className="child2 text-lg font-medium">Add to favorites</p>
+                <p className="child2 text-md lg:text-lg font-medium">Add</p>
               )}
             </div>
           </div>

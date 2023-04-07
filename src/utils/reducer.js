@@ -7,6 +7,8 @@ export const initialState = {
   artist: artist,
   selectedTrack: null,
   isPlaying: true,
+  isOnRepeat: false,
+  isShuffle: false,
   favorite: localStorage.getItem("favorite")
     ? JSON.parse(localStorage.getItem("favorite"))
     : [],
@@ -54,7 +56,6 @@ export const reducer = (state, action) => {
     }
     case reducerCases.REMOVE_FAVORITE: {
       const newFavorite = action.favorite;
-      // Check if the song is already in the favorites array
       const newFavorites = state.favorite.filter(
         (song) => song.name !== newFavorite.name
       );
@@ -64,6 +65,19 @@ export const reducer = (state, action) => {
         ...state,
         favorite: newFavorites,
       };
+    }
+
+    case reducerCases.TOGGLE_REPEAT:{
+      return{
+        ...state,
+        isOnRepeat : action.isOnRepeat
+      }
+    }
+    case reducerCases.TOGGLE_SHUFFLE:{
+      return{
+        ...state,
+        isShuffle : action.isShuffle
+      }
     }
     default:
       return state;

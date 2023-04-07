@@ -45,7 +45,7 @@ export default function Slider() {
           key={index}
           className={`${
             activeSlide === index ? "block animate-fade" : "hidden"
-          } w-[90%] h-[20.8rem] mx-auto rounded-lg`}
+          } w-[90%] h-[20.8rem] mx-auto mt-16 rounded-lg`}
         >
           <img src={item} className="w-full h-full object-cover rounded-lg" alt="" />
 

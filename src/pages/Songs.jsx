@@ -23,7 +23,7 @@ export default function Songs() {
   console.log(isAlreadyInFavorites);
 
   return (
-    <div className="bg-black-main w-[85%] pt-16 h-[85%] p-5 px-24 overflow-y-scroll">
+    <div className="bg-black-main w-full lg:w-[85%] pt-16 h-[85%] p-5 lg:px-24 overflow-y-scroll">
       <table className="w-full relative">
         <thead className=" backdrop-blur-sm sticky z-50 top-0 left-0 text-white-primary w-full">
           <tr>
@@ -55,7 +55,7 @@ export default function Songs() {
                 <img src={item.img} width={30} className="" alt="" />
                 <p>{item.name}</p>
                 {selectedTrack === index && isPlaying && (
-                  <img src={sound} width={50} alt="" />
+                  <img src={sound} className="w-5 lg:w-16 lg:h-12 h-5"  alt="" />
                 )}
               </td>
               <td className="text-center py-4">{item.artist}</td>

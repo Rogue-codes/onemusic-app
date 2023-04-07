@@ -14,6 +14,11 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
   const [addedToFavorites,setAddedToFavorites] = useState(false);
 
+
+  // const handleVolChange = (e) => {
+  //   setVolume(parseFloat(e.target.value));
+  // }
+
   return (
     <div>
       <Router>
