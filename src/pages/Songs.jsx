@@ -1,8 +1,6 @@
 import { useAppContext } from "../context/PlayerProvider";
-import { SlHeart } from "react-icons/sl";
 import { BsPlayFill } from "react-icons/bs";
 import { reducerCases } from "../utils/contants";
-import { AiFillHeart } from "react-icons/ai";
 import { sound } from "../assets";
 
 export default function Songs() {
@@ -55,7 +53,7 @@ export default function Songs() {
                 <img src={item.img} width={30} className="" alt="" />
                 <p>{item.name}</p>
                 {selectedTrack === index && isPlaying && (
-                  <img src={sound} className="w-5 lg:w-16 lg:h-12 h-5"  alt="" />
+                  <img src={sound} className="w-5 lg:w-16 lg:h-8 h-5"  alt="" />
                 )}
               </td>
               <td className="text-center py-4">{item.artist}</td>
