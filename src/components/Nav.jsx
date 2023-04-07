@@ -38,7 +38,7 @@ export default function Nav() {
     },
   ];
   return (
-    <div className="w-full lg:w-[85%] h-[3.88rem] border-b border-[#242424] bg-black-main fixed top-0 left-0 lg:left-[15%] z-20 flex justify-between px-5 lg:px-0 lg:justify-center items-center">
+    <div className="w-full lg:w-[85%] h-[3.88rem] border-b border-[#242424] bg-black-main fixed top-0 left-0 lg:left-[15%] z-50 flex justify-between px-5 lg:px-0 lg:justify-center items-center">
       {showMenu ? (
         <FaTimes
           className="text-blue-100 text-2xl z-50 lg:hidden"
@@ -63,7 +63,7 @@ export default function Nav() {
       <div
         className={`${
           showMenu ? "translate-x-[0%]" : "-translate-x-[100%]"
-        } w-[80%] fixed top-0 left-0 transition-transform border z-40 h-full bg-black-side`}
+        } w-[80%] fixed top-0 left-0 transition-transform border z-60 h-full bg-black-side`}
       >
         <ul className="mt-24 pl-4">
           {music.map((item, index) => (

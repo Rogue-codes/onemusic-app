@@ -1,10 +1,16 @@
 import React, { useRef, useState } from "react";
 import { useAppContext } from "../context/PlayerProvider";
 import Controls from "./Controls";
-import { BsRepeat, BsFillVolumeUpFill, BsRepeat1 } from "react-icons/bs";
+import {
+  BsRepeat,
+  BsThreeDots,
+  BsFillVolumeUpFill,
+  BsRepeat1,
+} from "react-icons/bs";
 import { SlHeart, SlShuffle } from "react-icons/sl";
 import { AiFillHeart } from "react-icons/ai";
 import { reducerCases } from "../utils/contants";
+import { toast } from "react-toastify";
 
 export default function Footer() {
   const [{ tracks, selectedTrack, favorite, isOnRepeat, isShuffle }, dispatch] =
@@ -12,6 +18,8 @@ export default function Footer() {
   const [showVol, setShowVol] = useState(false);
 
   const [volume, setVolume] = useState(0.5);
+
+  const [showMenu,setShowMenu] = useState(false);
 
   const audioRef = useRef();
 
@@ -62,7 +70,9 @@ export default function Footer() {
       <div className="flex items-center gap-5">
         <img src={currentlyPlaying?.img} width={50} alt="" />
         <div>
-          <p className="text-white-primary text-xs lg:text-sm">{currentlyPlaying?.name}</p>
+          <p className="text-white-primary text-xs lg:text-sm">
+            {currentlyPlaying?.name}
+          </p>
           <p className="text-white-secondary text-xs lg:text-sm">
             {currentlyPlaying?.artist}
           </p>
@@ -87,7 +97,7 @@ export default function Footer() {
         )}
         {isAlreadyInFavorites ? (
           <AiFillHeart
-          className="hidden lg:block"
+            className="hidden lg:block"
             size={20}
             color="#00ffff"
             onClick={removeFromFavorites}
@@ -130,6 +140,62 @@ export default function Footer() {
           value={volume}
           onChange={handleVolumeChange}
           className="h-[2px] w-[80%]"
+        />
+      </div>
+
+      <BsThreeDots className="cursor-pointer text-5xl lg:hidden text-blue-100 hover:text-blue-100 transition-all" onClick={() => setShowMenu(!showMenu)} />
+
+      <div className={`${showMenu ? "bottom-16" : "-bottom-36"} transition-transform w-10 h-32 bg-[#000] flex flex-col justify-around items-center absolute right-2 bottom-16`}>
+        {!isOnRepeat ? (
+          <BsRepeat
+            className="cursor-pointer text-[#fff] hover:text-blue-100 transition-all"
+            size={20}
+            onClick={()=>{
+              handleRepeat
+              setShowMenu(!showMenu)
+              toast.success("Repeat: On")
+            }
+            }
+          />
+        ) : (
+          <BsRepeat1
+            className="cursor-pointer lg:block text-[#fff] hover:text-blue-100 transition-all"
+            size={20}
+            onClick={()=>{
+              handleRepeat
+              setShowMenu(!showMenu)
+              toast.warn("Repeat off")
+            }
+          }
+          />
+        )}
+
+        {isAlreadyInFavorites ? (
+          <AiFillHeart
+            className=""
+            size={20}
+            color="#00ffff"
+            onClick={removeFromFavorites}
+          />
+        ) : (
+          <SlHeart
+            className="cursor-pointer text-[#fff] hover:text-blue-100 transition-all"
+            size={20}
+            onClick={addToFavorites}
+          />
+        )}
+
+        <SlShuffle
+          className={`${
+            isShuffle ? "text-blue-100" : "text-[#fff]"
+          } cursor-pointer hover:text-blue-100 transition-all`}
+          size={20}
+          onClick={()=>{
+            handleShuffle
+            setShowMenu(!showMenu)
+            toast.warn("Shuffle")
+          }
+        }
         />
       </div>
     </div>

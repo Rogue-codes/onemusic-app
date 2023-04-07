@@ -23,7 +23,7 @@ export default function Songs() {
   return (
     <div className="bg-black-main w-full lg:w-[85%] pt-16 h-[85%] p-5 lg:px-24 overflow-y-scroll">
       <table className="w-full relative">
-        <thead className=" backdrop-blur-sm sticky z-50 top-0 left-0 text-white-primary w-full">
+        <thead className=" backdrop-blur-sm sticky z-30 top-0 left-0 text-white-primary w-full">
           <tr>
             <th>#</th>
             <th className="text-center flex justify-start mt-4 items-center gap-2">
