@@ -145,7 +145,7 @@ export default function Footer() {
 
       <BsThreeDots className="cursor-pointer text-5xl lg:hidden text-blue-100 hover:text-blue-100 transition-all" onClick={() => setShowMenu(!showMenu)} />
 
-      <div className={`${showMenu ? "bottom-16" : "-bottom-36"} transition-transform w-10 h-32 bg-[#000] flex flex-col justify-around items-center absolute right-2 bottom-16`}>
+      <div className={`${showMenu ? "bottom-16 block" : "hidden -bottom-36"} transition-transform w-10 h-32 bg-[#000] flex flex-col justify-around items-center absolute right-2 bottom-16`}>
         {!isOnRepeat ? (
           <BsRepeat
             className="cursor-pointer text-[#fff] hover:text-blue-100 transition-all"
